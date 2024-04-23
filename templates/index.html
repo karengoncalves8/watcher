@@ -1,0 +1,71 @@
+{% extends 'base.html' %} {% block content %} {% block head %} {{ super() }}
+<style type="text/css">
+  .capa {
+    height: 90%;
+  }
+  .fade-overlay {
+    height: 300px; /* Altura do gradiente, ajuste conforme necessário */
+  }
+</style>
+{% endblock %}
+
+<header>
+  <img class="capa" src="/static/img/duna.jpg" alt="" />
+  <div class="fade-overlay"></div>
+  <h2 class="px-2 text-center">
+    Discover, Watch, Fall in Love: Your ultimate guide to the best movies, new
+    releases, and recommendations
+  </h2>
+</header>
+
+<hr />
+<section class="container-md">
+  <div class="card mb-3 bg-transparent">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img
+          src="/static/img/streaming.png"
+          class="img-fluid rounded-start"
+          alt="..."
+        />
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h3 class="card-title">Don’t waste time looking where to watch</h3>
+          <p class="card-text">
+            Our platform offers a one-stop solution to effortlessly locate all
+            your desired content across various streaming services
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr />
+<section class="container-md">
+  <div class="card mb-3 bg-transparent">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img
+          src="/static/img/watchlist.png"
+          class="img-fluid rounded-start"
+          alt="..."
+        />
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h3 class="card-title">
+            Combine all your favorite movies and series in one watchlist
+          </h3>
+          <p class="card-text">
+            Streamline your entertainment experience and never miss a moment of
+            your most-loved content again. Simplify, organize, and enjoy your
+            entertainment on your terms!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock content %}

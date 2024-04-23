@@ -1,0 +1,197 @@
+{% extends 'base.html' %} {% block content %}
+
+<header>
+  <img
+    class="capa"
+    src="/static/img/series/fallout.png"
+    alt=""
+    width="5rem"
+  />
+  <div class="fade-overlay"></div>
+  <div class="card bg-transparent" style="width: 40%">
+    <div class="card-body">
+      <img
+        class="card-title ps-3"
+        src="/static/img/series/falloutName.png"
+        alt=""
+        width="50%"
+      />
+      <div
+        class="card-subtitle mt-4 ps-3 d-flex gap-3 align-items-center flex-wrap"
+      >
+        <h6>1 temporada</h6>
+        <button class="btn">
+          <img src="/static/img/icons/addIcon.svg" alt="" width="20rem" />
+          <span class="btn-txt">Add to Watchlist</span>
+        </button>
+      </div>
+
+      <img
+        class="mt-3 ps-3"
+        src="/static/img/icons/starsIcon.svg"
+        alt=""
+        width="150rem"
+      />
+
+      <div class="mt-3 ps-3 d-flex gap-3">
+        <div class="btn-genre">
+          <span>Action</span>
+        </div>
+        <div class="btn-genre">
+          <span>Drama</span>
+        </div>
+      </div>
+      <p class="card-text ps-3 mt-3">
+        In a future, post-apocalyptic Los Angeles brought about by nuclear decimation, citizens must live in underground bunkers to protect themselves from radiation, mutants and bandits.
+      </p>
+      <h6 class="ps-3">Available on:</h6>
+      <div class="mt-3 ps-3 d-flex gap-4 align-items-center">
+        <img src="/static/img/icons/amazonIcon.svg" alt="" />
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="container-fluid p-0 d-flex flex-column gap-2">
+  <section class="mt-3" style="padding: 0rem 3rem">
+    <h2>Genre</h2>
+    <div class="mt-3 grid">
+      <div class="card-genre">
+        <img src="/static/img/movies/drama.png" alt="" />
+        <span>Drama</span>
+      </div>
+      <div class="card-genre">
+        <img src="/static/img/movies/action.png" alt="" />
+        <span>Action</span>
+      </div>
+      <div class="card-genre">
+        <img src="/static/img/movies/comedy.png" alt="" />
+        <span>Comedy</span>
+      </div>
+      <div class="card-genre">
+        <img src="/static/img/movies/horror.png" alt="" />
+        <span>Horror</span>
+      </div>
+      <div class="card-genre">
+        <img src="/static/img/movies/romance.png" alt="" />
+        <span>Romance</span>
+      </div>
+    </div>
+  </section>
+
+  <hr />
+
+  <section class="mt-3" style="padding: 0rem 3rem">
+    <h2>Upcoming</h2>
+    <div class="mt-3 grid">
+      <div class="cards">
+        <img src="/static/img/movies/challengers.png" alt="" />
+        <h6 class="mt-2">Challengers</h6>
+        <div class="cards-info">
+          <span>Apr, 26</span>
+          <div class="btn-genre">
+            <span>Drama</span>
+          </div>
+        </div>
+      </div>
+      <div class="cards">
+        <img src="/static/img/movies/civilWar.png" alt="" />
+        <h6 class="mt-2">Civil War</h6>
+        <div class="cards-info">
+          <span>Apr, 12</span>
+          <div class="btn-genre">
+            <span>Action</span>
+          </div>
+        </div>
+      </div>
+      <div class="cards">
+        <img src="/static/img/movies/boyKW.png" alt="" />
+        <h6 class="mt-2">Boy Kills World</h6>
+        <div class="cards-info">
+          <span>Apr, 26</span>
+          <div class="btn-genre">
+            <span>Action</span>
+          </div>
+        </div>
+      </div>
+      <div class="cards">
+        <img src="/static/img/movies/quietPlace.png" alt="" />
+        <h6 class="mt-2">A Quiet Place: Day One</h6>
+        <div class="cards-info">
+          <span>June, 26</span>
+          <div class="btn-genre">
+            <span>Thriller</span>
+          </div>
+        </div>
+      </div>
+      <div class="cards">
+        <img src="/static/img/movies/gxk.png" alt="" />
+        <h6 class="mt-2">GxK: The New Empire</h6>
+        <div class="cards-info">
+          <span>July, 10</span>
+          <div class="btn-genre">
+            <span>Action</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr />
+  <section class="mt-3" style="padding: 0rem 3rem">
+    <h2>Trending Now</h2>
+    <div class="mt-3 grid">
+      <div class="cards">
+        <img src="/static/img/movies/damsel.png" alt="" />
+        <h6 class="mt-2">Damsel</h6>
+        <div class="cards-info">
+          <span>Netlix</span>
+          <div class="btn-genre">
+            <span>Action</span>
+          </div>
+        </div>
+      </div>
+      <div class="cards">
+        <img src="/static/img/movies/poorThings.png" alt="" />
+        <h6 class="mt-2">Poor Things</h6>
+        <div class="cards-info">
+          <span>StarPlus</span>
+          <div class="btn-genre">
+            <span>Comedy</span>
+          </div>
+        </div>
+      </div>
+      <div class="cards">
+        <img src="/static/img/movies/anatomyofFall.png" alt="" />
+        <h6 class="mt-2">Anatomy of a Fall</h6>
+        <div class="cards-info">
+          <span>Amazon</span>
+          <div class="btn-genre">
+            <span>Thriller</span>
+          </div>
+        </div>
+      </div>
+      <div class="cards">
+        <img src="/static/img/movies/zoneInterest.png" alt="" />
+        <h6 class="mt-2">The Zone of Interest</h6>
+        <div class="cards-info">
+          <span>Amazon</span>
+          <div class="btn-genre">
+            <span>Drama</span>
+          </div>
+        </div>
+      </div>
+      <div class="cards">
+        <img src="/static/img/movies/loveLies.png" alt="" />
+        <h6 class="mt-2">Love Lies Bleeding</h6>
+        <div class="cards-info">
+          <span>Apr, 26</span>
+          <div class="btn-genre">
+            <span>Romance</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% endblock content %}
