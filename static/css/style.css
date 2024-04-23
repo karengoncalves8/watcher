@@ -21,7 +21,7 @@ body{
     height: 100%;
 }
 
-
+/* Navbar */
 .nav-link {
     color: var(--white);
     font-weight: 600;
@@ -47,6 +47,7 @@ body{
     color: white;
 }
 
+/* Index */
 header{
     display: flex;
     flex-direction: column;
@@ -99,6 +100,7 @@ hr{
     margin-top: 2rem;
 }
 
+/* Movies and Series */
 header .card{
     z-index: 2;
     position: absolute;
@@ -186,6 +188,7 @@ section .btn-genre{
     transform: translateY(-10px);
 }
 
+/* Sign */
 form{
     gap: 0.6rem;
     font-size: 14px;
@@ -223,3 +226,38 @@ a{
     color: #603CEE;
 }
 
+/* Responsive */
+@media (max-width: 600px) {
+    /* Index */
+    h2{
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--white);
+        z-index: 2;
+        position: relative;
+    }
+    .imgCardIndex{
+        width: 80%;
+        align-self: center;
+    }
+
+    /* Movies and Series */
+    #Content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        position: relative;
+    }
+    
+    header .card{
+        z-index: 2;
+        position: absolute;
+        top: 5%;
+        left: 0;
+        border: none;
+        backdrop-filter: blur(1px);
+        font-size: 15px;
+    }
+
+  }

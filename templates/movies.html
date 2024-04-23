@@ -1,24 +1,15 @@
 {% extends 'base.html' %} {% block content %}
 
-<header>
-  <img
-    class="capa"
-    src="/static/img/movies/oppenheimer.png"
-    alt=""
-    width="5rem"
-  />
+<header id="Content">
+  <picture>
+    <source media="(max-width:600px)" srcset="/static/img/movies/oppenheimer-mob.png">
+    <img class="capa" src="/static/img/movies/oppenheimer.png" alt="Flowers" style="width:90%;">
+  </picture>
   <div class="fade-overlay"></div>
   <div class="card bg-transparent" style="width: 40%">
     <div class="card-body">
-      <img
-        class="card-title"
-        src="/static/img/movies/opName.png"
-        alt=""
-        width="100%"
-      />
-      <div
-        class="card-subtitle mt-4 ps-3 d-flex gap-3 align-items-center flex-wrap"
-      >
+      <img class="card-title" src="/static/img/movies/opName.png" alt="" width="100%" />
+      <div class="card-subtitle mt-4 ps-3 d-flex gap-3 align-items-center flex-wrap">
         <h6>3h 01min</h6>
         <button class="btn">
           <img src="/static/img/icons/addIcon.svg" alt="" width="20rem" />
@@ -26,12 +17,7 @@
         </button>
       </div>
 
-      <img
-        class="mt-3 ps-3"
-        src="/static/img/icons/starsIcon.svg"
-        alt=""
-        width="150rem"
-      />
+      <img class="mt-3 ps-3" src="/static/img/icons/starsIcon.svg" alt="" width="150rem" />
 
       <div class="mt-3 ps-3 d-flex gap-3">
         <div class="btn-genre">
