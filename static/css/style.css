@@ -6,13 +6,13 @@
     padding: 0;
 }
 
-:root{
+:root {
     --darkblue: #060710;
     --white: #ffffff;
     --purple: #582E82;
 }
 
-body{
+body {
     width: 100vw;
     background-color: var(--darkblue);
     color: var(--white);
@@ -22,33 +22,52 @@ body{
 }
 
 /* Navbar */
+.navbar {
+    transition: 1s;
+}
+
 .nav-link {
     color: var(--white);
     font-weight: 600;
 }
 
-.nav-link:hover{
+.nav-link:hover {
     color: var(--purple);
 }
 
-.active{
+.active {
     color: var(--purple);
     text-decoration: none;
     font-weight: 600;
 }
 
-.navbar-brand{
+.navbar-brand {
     font-family: "Jost", sans-serif;
     font-weight: 600;
     color: var(--white);
 }
 
-.navbar-toggler-icon-bg{
+.navbar-toggler-icon-bg {
     color: white;
 }
 
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+
+}
+
+body::-webkit-scrollbar {
+    width: 14px;
+}
+
+body::-webkit-scrollbar-thumb {
+
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .5);
+    background: var(--purple);
+}
+
 /* Index */
-header{
+header {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -56,11 +75,11 @@ header{
     position: relative;
 }
 
-.capa{
+.capa {
     position: relative;
     width: 100%;
     height: 100%;
-    object-fit:cover;
+    object-fit: cover;
     margin-bottom: 1rem;
     z-index: 1;
 }
@@ -70,12 +89,15 @@ header{
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 50px; /* Altura do gradiente, ajuste conforme necessário */
-    background: linear-gradient(to bottom, rgba(158, 9, 9, 0), rgba(6, 7, 16, 1) 80%); /* Gradiente linear transparente para opaco */
-    z-index: 2; /* Garante que o gradiente esteja na frente da imagem */
-  }
+    height: 50px;
+    /* Altura do gradiente, ajuste conforme necessário */
+    background: linear-gradient(to bottom, rgba(158, 9, 9, 0), rgba(6, 7, 16, 1) 80%);
+    /* Gradiente linear transparente para opaco */
+    z-index: 2;
+    /* Garante que o gradiente esteja na frente da imagem */
+}
 
-h2{
+h2 {
     font-size: 18px;
     font-weight: 600;
     color: var(--white);
@@ -83,25 +105,25 @@ h2{
     position: relative;
 }
 
-hr{
+hr {
     border: solid 1px #261a4b;
 }
 
-.card{
+.card {
     padding: 3rem 0rem;
 }
 
-.card-body{
+.card-body {
     margin-left: 2rem;
     color: var(--white);
 }
 
-.card-text{
+.card-text {
     margin-top: 2rem;
 }
 
 /* Movies and Series */
-header .card{
+header .card {
     z-index: 2;
     position: absolute;
     top: 5%;
@@ -109,31 +131,32 @@ header .card{
     border: none;
     backdrop-filter: blur(1px);
     font-size: 15px;
+    width: 40%;
 }
 
 
-.btn{
+.btn {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: var(--purple);
-    padding: 0.3rem 0.5rem ;
+    padding: 0.3rem 0.5rem;
     gap: 0.5rem;
 }
 
-.btn-txt{
+.btn-txt {
     color: var(--white);
     font-size: 14px;
     font-weight: 500;
 }
 
-.btn-genre{
+.btn-genre {
     border: 1px solid var(--white);
     border-radius: 8px;
     padding: 0.1rem 0.6rem;
 }
 
-.grid{
+.grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 10px;
@@ -144,120 +167,174 @@ header .card{
     height: auto;
 }
 
-.card-genre{
+.card-genre {
     width: 100%;
     position: relative;
 }
 
-.card-genre:hover{
+.card-genre:hover {
     transform: translateY(-10px);
 }
 
-.card-genre span{
+.card-genre span {
     position: absolute;
     bottom: 0;
     left: 0;
     padding: 0.3rem 1rem;
 }
 
-.cards{
+.cards {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.cards-info{
+.cards-info {
     display: flex;
     align-items: center;
     font-size: 12px;
     gap: 0.5rem;
 }
 
-section .btn-genre{
-    border-color: #F5C64B;
-    color: #F5C64B;
+section .btn-genre {
+    border-color: #8745c9;
+    color: #8745c9;
 }
 
-.cards img{
+.cards img {
     max-width: 100%;
     height: auto;
 }
 
-.cards:hover{
+.cards:hover {
     transform: translateY(-10px);
 }
 
 /* Sign */
-form{
+form {
     gap: 0.6rem;
     font-size: 14px;
 }
-form h2{
-    color:#603CEE;
-    font-size:22px;
+
+form h2 {
+    color: #603CEE;
+    font-size: 22px;
 }
 
-form input{
-    padding: 0.5rem 1rem ;
+form input {
+    padding: 0.5rem 1rem;
     width: 100%;
     border-radius: 8px;
     border-style: none;
     font-weight: 500;
 }
 
-form span{
+form span {
     font-size: 12px;
     align-self: flex-end;
 }
 
-form hr{
+form hr {
     border: 1.6px solid white;
     width: 7rem;
 }
 
-#btnLogin{
+#btnLogin {
     background-color: #603CEE;
     color: white;
 }
 
-a{
+a {
     text-decoration: none;
     color: #603CEE;
 }
 
 /* Responsive */
 @media (max-width: 600px) {
+
     /* Index */
-    h2{
+    h2 {
         font-size: 14px;
         font-weight: 600;
         color: var(--white);
         z-index: 2;
         position: relative;
     }
-    .imgCardIndex{
+
+    .imgCardIndex {
         width: 80%;
         align-self: center;
     }
 
     /* Movies and Series */
-    #Content{
+    #Content {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         height: 100vh;
         position: relative;
     }
-    
-    header .card{
+
+    header .card {
         z-index: 2;
         position: absolute;
         top: 5%;
-        left: 0;
-        border: none;
+        left: 15%;
         backdrop-filter: blur(1px);
         font-size: 15px;
+        width: 80%;
     }
 
-  }
+    #img-capa {
+        object-fit: cover;
+    }
+
+    .card-body {
+        margin-left: 0;
+        padding: 0;
+    }
+
+    .card-title {
+        width: 70%;
+    }
+
+    .btn-txt {
+        color: var(--white);
+        font-size: 10px;
+        font-weight: 500;
+    }
+
+    .btn-genre {
+        border: 1px solid var(--white);
+        border-radius: 8px;
+        padding: 0.1rem 0.6rem;
+        font-size: 10px;
+    }
+
+    header h6 {
+        font-size: 12px;
+    }
+
+    #AddIcon {
+        width: 0.9rem;
+    }
+
+    #StarsIcon {
+        width: 8rem;
+    }
+
+    .card-text {
+        font-size: 10px;
+        width: 80%;
+    }
+
+    .streaming img {
+        width: 4rem;
+    }
+
+    footer p {
+        font-size: 10px;
+    }
+}

@@ -1,23 +1,20 @@
 {% extends 'base.html' %} {% block content %}
 
 <header id="Content">
-  <picture>
-    <source media="(max-width:600px)" srcset="/static/img/movies/oppenheimer-mob.png">
-    <img class="capa" src="/static/img/movies/oppenheimer.png" alt="Flowers" style="width:90%;">
-  </picture>
+  <img class="capa" id="img-capa" src="/static/img/movies/oppenheimer.png" alt="" width="5rem" />
   <div class="fade-overlay"></div>
-  <div class="card bg-transparent" style="width: 40%">
+  <div class="card bg-transparent">
     <div class="card-body">
       <img class="card-title" src="/static/img/movies/opName.png" alt="" width="100%" />
       <div class="card-subtitle mt-4 ps-3 d-flex gap-3 align-items-center flex-wrap">
         <h6>3h 01min</h6>
         <button class="btn">
-          <img src="/static/img/icons/addIcon.svg" alt="" width="20rem" />
+          <img src="/static/img/icons/addIcon.svg" id="AddIcon" alt="" width="20rem" />
           <span class="btn-txt">Add to Watchlist</span>
         </button>
       </div>
 
-      <img class="mt-3 ps-3" src="/static/img/icons/starsIcon.svg" alt="" width="150rem" />
+      <img class="mt-3 ps-3" id="StarsIcon" src="/static/img/icons/starsIcon.svg" alt="" width="150rem" />
 
       <div class="mt-3 ps-3 d-flex gap-3">
         <div class="btn-genre">
@@ -36,7 +33,7 @@
         changing the course of history.
       </p>
       <h6 class="ps-3">Available on:</h6>
-      <div class="mt-3 ps-3 d-flex gap-4 align-items-center">
+      <div class="mt-3 ps-3 d-flex gap-4 align-items-center streaming">
         <img src="/static/img/icons/appleIcon.svg" alt="" />
         <img src="/static/img/icons/amazonIcon.svg" alt="" />
       </div>
@@ -176,7 +173,7 @@
         <img src="/static/img/movies/loveLies.png" alt="" />
         <h6 class="mt-2">Love Lies Bleeding</h6>
         <div class="cards-info">
-          <span>Apr, 26</span>
+          <span>Amazon</span>
           <div class="btn-genre">
             <span>Romance</span>
           </div>
