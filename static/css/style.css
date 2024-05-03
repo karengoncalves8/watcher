@@ -250,6 +250,10 @@ a {
     color: #603CEE;
 }
 
+form btn:hover{
+    background-color: #261a4b;
+}
+
 /* Responsive */
 @media (max-width: 600px) {
 

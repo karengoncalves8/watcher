@@ -2,16 +2,16 @@
     <main class="container-fluid d-flex align-items-center justify-content-center" style="height: 85vh; ">
         <form class="d-flex flex-column align-items-center">
             <h2>Sign In</h2>
-            <input type="text" name="email" id="email" placeholder="Email">
-            <input type="text" name="password" id="password" placeholder="Password">
+            <input type="email" name="email" id="email" placeholder="Email">
+            <input type="password" name="password" id="password" placeholder="Password">
             <span>Forgot your password?</span>
             <input type="button" value="Log In" id="btnLogin">
             <div class="d-flex align-items-center gap-2">
-                <hr> ou <hr>
+                <hr> or <hr>
             </div>
             <input type="button" value="Log In with Google">
             <input type="button" value="Log In with Facebook">
-            <span>Don't have account? <a href="#">Sign Up!</a></span>
+            <span>Don't have account? <a href="signUp">Sign Up!</a></span>
         </form>
     </main>
 {% endblock %}
