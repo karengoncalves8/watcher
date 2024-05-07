@@ -3,9 +3,9 @@ from flask_mysqldb import MySQL
 
 app = Flask(__name__)
 
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'fatec'
+app.config['MYSQL_HOST'] = 'db'
+app.config['MYSQL_USER'] = 'karen'
+app.config['MYSQL_PASSWORD'] = '123'
 app.config['MYSQL_DB'] = 'watcher'
  
 mysql = MySQL(app)
@@ -65,7 +65,7 @@ def login():
             session['id'] = account[0]
             session['username'] = account[1]
             session['email'] = account[2]
-            msg = f'Logged in successfully! Welcome {session['username']}'
+            msg = f'Logged in successfully! Welcome {session["username"]}'
         else:
             msg = 'Incorrect username / password !'
     return render_template('signIn.html', msg = msg) 
