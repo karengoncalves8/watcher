@@ -1,11 +1,12 @@
 {% extends 'base.html' %} {% block content %} 
     <main class="container-fluid d-flex align-items-center justify-content-center" style="height: 85vh; ">
-        <form class="d-flex flex-column align-items-center">
+        <form class="d-flex flex-column align-items-center" method="POST" action="{{ url_for('login') }}">
+            <h6>{{ msg }}</h2>
             <h2>Sign In</h2>
-            <input type="email" name="email" id="email" placeholder="Email">
-            <input type="password" name="password" id="password" placeholder="Password">
+            <input type="email" name="Email" id="email" placeholder="Email" required>
+            <input type="password" name="Password" id="password" placeholder="Password" required>
             <span>Forgot your password?</span>
-            <input type="button" value="Log In" id="btnLogin">
+            <input type="submit" value="Log In" id="btnLogin">
             <div class="d-flex align-items-center gap-2">
                 <hr> or <hr>
             </div>

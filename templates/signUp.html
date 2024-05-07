@@ -1,11 +1,11 @@
 {% extends 'base.html' %} {% block content %} 
     <main class="container-fluid d-flex align-items-center justify-content-center" style="height: 85vh; ">
-        <form class="d-flex flex-column align-items-center">
+        <form class="d-flex flex-column align-items-center" action="{{ url_for('register') }}" method = "POST">
             <h2>Sign Up</h2>
-            <input type="text" name="name" id="name" placeholder="Full Name">
-            <input type="email" name="email" id="email" placeholder="Email">
-            <input type="password" name="password" id="password" placeholder="Password">
-            <input type="button" value="Sign Up" id="btnLogin">
+            <input type="text" name="Name" id="name" placeholder="Full Name">
+            <input type="email" name="Email" id="email" placeholder="Email">
+            <input type="password" name="Password" id="password" placeholder="Password">
+            <input type="submit" value="Sign Up" id="btnLogin">
             <div class="d-flex align-items-center gap-2">
                 <hr> or <hr>
             </div>
