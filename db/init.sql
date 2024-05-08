@@ -8,15 +8,3 @@ CREATE TABLE IF NOT EXISTS Users(
     Email Varchar(100) NOT NULL,
     Password Varchar(255) NOT NULL
 );
-
--- INSERT INTO Users(
--- 	Name, 
---     Email,
---     Password
--- ) VALUES
--- 	('Tom Holland', 'tomholland@gmail.com', 'zendaya');
-
--- SELECT * FROM Users;
-
-
-

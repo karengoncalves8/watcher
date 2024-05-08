@@ -67,7 +67,7 @@ def login():
             session['email'] = account[2]
             msg = f'Logged in successfully! Welcome {session["username"]}'
         else:
-            msg = 'Incorrect username / password !'
+            msg = 'Incorrect username / password!'
     return render_template('signIn.html', msg = msg) 
 
 app.run(debug=True)

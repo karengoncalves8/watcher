@@ -18,5 +18,4 @@ services:
       MYSQL_USER: karen
       MYSQL_DATABASE: watcher
     volumes:
-      - ./data:/var/lib/mysql
-      - ./db:/docker-entrypoint-initdb.d
+      - ./db:/docker-entrypoint-initdb.d/:ro
