@@ -1,7 +1,7 @@
 version: '1.0'
 services:
   app:
-    build: ./app/
+    image: karencgoncalves/watcher-app:1.0
     links:
       - 'db'
     ports:
@@ -14,8 +14,5 @@ services:
       - '3306:3306'
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_PASSWORD: 123
-      MYSQL_USER: karen
-      MYSQL_DATABASE: watcher
     volumes:
-      - ./db:/docker-entrypoint-initdb.d
+      - ./db:/docker-entrypoint-initdb.d/:ro
