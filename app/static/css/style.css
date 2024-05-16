@@ -66,6 +66,10 @@ body::-webkit-scrollbar-thumb {
     background: var(--purple);
 }
 
+.dropdown-toggle::after {
+    display: none;
+  }
+
 /* Index */
 header {
     display: flex;
@@ -214,20 +218,22 @@ section .btn-genre {
 /* Sign */
 form {
     gap: 0.6rem;
-    font-size: 14px;
+    font-size: 12px;
+    padding: 0.4rem;
 }
 
 form h2 {
     color: #603CEE;
-    font-size: 22px;
+    font-size: 14px;
 }
 
-form input {
+form input{
     padding: 0.5rem 1rem;
     width: 100%;
     border-radius: 8px;
     border-style: none;
     font-weight: 500;
+    border: 1.5px solid black;
 }
 
 form span {
@@ -243,6 +249,7 @@ form hr {
 #btnLogin {
     background-color: #603CEE;
     color: white;
+    border: none;
 }
 
 a {

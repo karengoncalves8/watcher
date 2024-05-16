@@ -35,8 +35,22 @@
           </li>
         </ul>
         <div class="d-flex gap-2">
-          <a class="nav-link" href="#"><img src="/static/img/icons/heartIcon.svg" alt="" /></a>
-          <a class="nav-link" href="/signIn"><img src="/static/img/icons/userIcon.svg" alt="" /></a>
+          <a class="nav-link" href="/watchlist"><img src="/static/img/icons/heartIcon.svg" alt="" /></a>
+          <!-- <a class="nav-link" href="/signIn"><img src="/static/img/icons/userIcon.svg" alt="" /></a> -->
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="/static/img/icons/userIcon.svg" alt="" />
+            </a>
+            <ul class="dropdown-menu dropdown-menu-lg-end">
+              <form class="d-flex flex-column align-items-center" method="POST" action="{{ url_for('login') }}">
+                <h2>Sign In</h2>
+                <input type="email" name="Email" id="email" placeholder="Email" required>
+                <input type="password" name="Password" id="password" placeholder="Password" required>
+                <span>Forgot your password?</span>
+                <input type="submit" value="Log In" id="btnLogin">
+                <span>Don't have account? <a href="signUp">Sign Up!</a></span>
+                <h6>{{ msg }}</h2>
+            </form>
+            </ul>
         </div>
       </div>
     </div>

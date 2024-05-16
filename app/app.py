@@ -3,11 +3,16 @@ from flask_mysqldb import MySQL
 
 app = Flask(__name__)
 
-app.config['MYSQL_HOST'] = 'db'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'root'
-app.config['MYSQL_DB'] = 'Watcher'
+# app.config['MYSQL_HOST'] = 'db'
+# app.config['MYSQL_USER'] = 'root'
+# app.config['MYSQL_PASSWORD'] = 'root'
+# app.config['MYSQL_DB'] = 'Watcher'
  
+app.config['MYSQL_HOST'] = 'localhost'
+app.config['MYSQL_USER'] = 'root'
+app.config['MYSQL_PASSWORD'] = 'fatec'
+app.config['MYSQL_DB'] = 'watcher'
+
 mysql = MySQL(app)
 
 app.secret_key = 'your secret key'
@@ -36,6 +41,14 @@ def signIn():
 @app.route('/signUp')
 def signUp():
     return render_template('signUp.html')
+
+@app.route('/watchlist')
+def watchlist():
+    return render_template('watchlist.html')
+
+@app.route('/profile')
+def profile():
+    return render_template('profile.html')
 
 @app.route('/register', methods = ['POST', 'GET'])
 def register():
