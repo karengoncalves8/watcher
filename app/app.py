@@ -48,7 +48,12 @@ def watchlist():
 
 @app.route('/profile')
 def profile():
-    return render_template('profile.html')
+    cur = mysql.connection.cursor()
+    id = session['id']
+    cur.execute(f'SELECT * FROM Users WHERE CodUser = {id}')
+    profile = cur.fetchall()
+    cur.close()
+    return render_template('profile.html', profile=profile[0])
 
 @app.route('/register', methods = ['POST', 'GET'])
 def register():

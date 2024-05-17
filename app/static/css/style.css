@@ -10,6 +10,7 @@
     --darkblue: #060710;
     --white: #ffffff;
     --purple: #582E82;
+    --light-purple: #603CEE;
 }
 
 body {
@@ -259,6 +260,60 @@ a {
 
 form btn:hover{
     background-color: #261a4b;
+}
+
+/* Profile */
+
+#profile-title{
+    color: #603CEE;
+    font-size: 18px;
+}
+
+.profile {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    gap: 1rem;
+}
+
+.input-item{
+    display: flex;
+    align-items: center;
+}
+
+.input-item input{
+    padding: 0.5rem 1rem;
+    flex: 2.3;
+    border-radius: 8px;
+    border-style: none;
+    font-weight: 500;
+    background: transparent;
+    color: white;
+    border-bottom: 1.3px solid rgb(255, 255, 255);
+}
+
+.input-item label{
+    flex: 1;
+    font-weight: 600;
+}
+
+
+#Edit {
+    margin-top: 0.5rem;
+    color: white;
+    background-color: transparent;
+    border: none;
+    padding: 0.5rem 3rem;
+    width: min-content;
+    align-self: flex-end;
+    border: 1px solid var(--light-purple);
+}
+
+
+#Edit:hover{
+    background-color:var(--light-purple) ;
+    color: white;
 }
 
 /* Responsive */

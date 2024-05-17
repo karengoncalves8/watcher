@@ -1,18 +1,23 @@
 {% extends 'base.html' %} {% block content %}
-<main class="container-fluid p-0 d-flex flex-column gap-2">
-    <div class="d-flex justify-content-between">
-        <h2>My Profile</h2>
+<main class="container-fluid d-flex flex-column align-items-center justify-content-center" style="height: 85vh; ">
+    <h2 id="profile-title">My Profile</h2>
 
-        <form action="">
+    <form class="profile" action="">
+        <div class="input-item">
             <label for="name">Name</label>
-            <input type="text" name="Name" id="name" placeholder="Full Name">
+            <input type="text" name="Name" id="name" placeholder="Full Name" value="{{profile[1]}}">
+        </div>
+        <div class="input-item">
             <label for="email">Email</label>
-            <input type="email" name="Email" id="email" placeholder="Email">
+            <input type="email" name="Email" id="email" placeholder="Email" value="{{profile[2]}}">
+        </div>
+        <div class="input-item">
             <label for="password">Password</label>
-            <input type="password" name="Password" id="password" placeholder="Password">
+            <input type="password" name="Password" id="password" placeholder="Password" value="{{profile[3]}}">
+        </div>
 
-            <input type="submit" value="Edit">
-        </form>
+        <input type="submit" value="Edit" id="Edit">
+    </form>
 
 </main>
 {% endblock %}
