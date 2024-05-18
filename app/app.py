@@ -4,24 +4,20 @@ import MySQLdb
 
 app = Flask(__name__)
 
-# app.config['MYSQL_HOST'] = 'db'
-# app.config['MYSQL_USER'] = 'root'
-# app.config['MYSQL_PASSWORD'] = 'root'
-# app.config['MYSQL_DB'] = 'Watcher'
- 
-app.config['MYSQL_HOST'] = 'localhost'
+app.config['MYSQL_HOST'] = 'db'
 app.config['MYSQL_USER'] = 'root'
-# app.config['MYSQL_PASSWORD'] = 'fatec'
-app.config['MYSQL_DB'] = 'watcher'
+app.config['MYSQL_PASSWORD'] = 'root'
+app.config['MYSQL_DB'] = 'Watcher'
+ 
+# app.config['MYSQL_HOST'] = 'localhost'
+# app.config['MYSQL_USER'] = 'root'
+# # app.config['MYSQL_PASSWORD'] = 'fatec'
+# app.config['MYSQL_DB'] = 'watcher'
 
 mysql = MySQL(app)
 
-app.secret_key = 'your secret key'
+app.secret_key = 'watcher#01'
 
-    # cursor = mysql.connection.cursor()
-    # cursor.execute('select * from Users')
-    # output = cursor.fetchall()
-    # return str(output)
 
 @app.route('/')
 def index():
