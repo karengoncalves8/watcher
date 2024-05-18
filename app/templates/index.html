@@ -68,4 +68,14 @@
     </div>
   </div>
 </section>
+
+<script>
+  // Display the message as an alert when the page loads
+  window.onload = function() {
+      var msg = "{{ msg }}";
+      if (msg) {
+          alert(msg);
+      }
+  };
+</script>
 {% endblock content %}

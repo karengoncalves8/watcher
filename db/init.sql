@@ -5,6 +5,6 @@ USE Watcher;
 CREATE TABLE IF NOT EXISTS Users(
 	CodUser INT PRIMARY KEY AUTO_INCREMENT,
 	Name Varchar(100) NOT NULL,
-    Email Varchar(100) NOT NULL,
+    Email Varchar(100) NOT NULL UNIQUE,
     Password Varchar(255) NOT NULL
 );
