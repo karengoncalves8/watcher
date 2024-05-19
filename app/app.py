@@ -1,18 +1,19 @@
 from flask import Flask, render_template, request, session, url_for, redirect
 from flask_mysqldb import MySQL
 import MySQLdb
+from getMovies import getMovies
 
 app = Flask(__name__)
 
-app.config['MYSQL_HOST'] = 'db'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'root'
-app.config['MYSQL_DB'] = 'Watcher'
- 
-# app.config['MYSQL_HOST'] = 'localhost'
+# app.config['MYSQL_HOST'] = 'db'
 # app.config['MYSQL_USER'] = 'root'
-# # app.config['MYSQL_PASSWORD'] = 'fatec'
-# app.config['MYSQL_DB'] = 'watcher'
+# app.config['MYSQL_PASSWORD'] = 'root'
+# app.config['MYSQL_DB'] = 'Watcher'
+ 
+app.config['MYSQL_HOST'] = 'localhost'
+app.config['MYSQL_USER'] = 'root'
+# app.config['MYSQL_PASSWORD'] = 'fatec'
+app.config['MYSQL_DB'] = 'watcher'
 
 mysql = MySQL(app)
 
@@ -25,7 +26,8 @@ def index():
 
 @app.route('/movies')
 def movies():
-    return render_template('movies.html')
+    movies = getMovies()
+    return render_template('movies.html', movies=movies)
 
 @app.route('/series')
 def series():

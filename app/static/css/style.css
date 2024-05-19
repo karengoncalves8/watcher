@@ -209,6 +209,7 @@ section .btn-genre {
 .cards img {
     max-width: 100%;
     height: auto;
+    border-radius: 5%;
 }
 
 .cards:hover {
@@ -363,7 +364,7 @@ form btn:hover{
         position: absolute;
         top: 5%;
         left: 15%;
-        backdrop-filter: blur(1px);
+        backdrop-filter: blur(3px);
         font-size: 15px;
         width: 80%;
     }

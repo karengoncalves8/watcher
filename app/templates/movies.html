@@ -1,36 +1,55 @@
 {% extends 'base.html' %} {% block content %}
 
 <header id="Content">
-  <img class="capa" id="img-capa" src="/static/img/movies/oppenheimer.png" alt="" width="5rem" />
+  <img
+    class="capa"
+    id="img-capa"
+    src="{{ 'https://image.tmdb.org/t/p/original/' ~ movies[0]['images']['backdrops'][2]['file_path'] }}" 
+    alt="{{ movies[0]['title'] }}"
+    width="5rem"
+  />
   <div class="fade-overlay"></div>
   <div class="card bg-transparent">
     <div class="card-body">
-      <img class="card-title" src="/static/img/movies/opName.png" alt="" width="100%" />
-      <div class="card-subtitle mt-4 ps-3 d-flex gap-3 align-items-center flex-wrap">
-        <h6>3h 01min</h6>
+      <img
+        class="card-title"
+        src="{{ 'https://image.tmdb.org/t/p/original/' ~ movies[0]['images']['logos'][1]['file_path'] }}" 
+        alt="{{ movies[0]['title'] }}"
+        width="80%"
+      />
+      <div
+        class="card-subtitle mt-4 ps-3 d-flex gap-3 align-items-center flex-wrap"
+      >
+        <h6>{{ movies[0]['info']['runtime'] }}min</h6>
         <button class="btn">
-          <img src="/static/img/icons/addIcon.svg" id="AddIcon" alt="" width="20rem" />
+          <img
+            src="/static/img/icons/addIcon.svg"
+            id="AddIcon"
+            alt=""
+            width="20rem"
+          />
           <span class="btn-txt">Add to Watchlist</span>
         </button>
       </div>
 
-      <img class="mt-3 ps-3" id="StarsIcon" src="/static/img/icons/starsIcon.svg" alt="" width="150rem" />
+      <img
+        class="mt-3 ps-3"
+        id="StarsIcon"
+        src="/static/img/icons/starsIcon.svg"
+        alt=""
+        width="150rem"
+      />
 
       <div class="mt-3 ps-3 d-flex gap-3">
         <div class="btn-genre">
-          <span>Drama</span>
+          <span>{{ movies[0]['genre_names'][0] }}</span>
         </div>
         <div class="btn-genre">
-          <span>History</span>
+          <span>{{ movies[0]['genre_names'][1] }}</span>
         </div>
       </div>
       <p class="card-text ps-3 mt-3">
-        During World War II, Lt. Gen. Leslie Groves Jr. appoints physicist J.
-        Robert Oppenheimer to work on the top-secret Manhattan Project.
-        Oppenheimer and a team of scientists spend years developing and
-        designing the atomic bomb. Their work comes to fruition on July 16,
-        1945, as they witness the world's first nuclear explosion, forever
-        changing the course of history.
+        {{ movies[0]['info']['overview'] }}
       </p>
       <h6 class="ps-3">Available on:</h6>
       <div class="mt-3 ps-3 d-flex gap-4 align-items-center streaming">
@@ -129,56 +148,22 @@
   <section class="mt-3" style="padding: 0rem 3rem">
     <h2>Trending Now</h2>
     <div class="mt-3 grid">
+      {% for movie in movies[1:11] %} 
       <div class="cards">
-        <img src="/static/img/movies/damsel.png" alt="" />
-        <h6 class="mt-2">Damsel</h6>
+        <img src="{{ 'https://image.tmdb.org/t/p/w500' ~ movie['poster_path'] }}" alt="{{ movie['title'] }}" />
+        <h6 class="mt-2">{{ movie['title'] }}</h6>
         <div class="cards-info">
-          <span>Netlix</span>
+          {% if movie['providers'] != 'No provider yet' %} 
+            <span>{{ movie['providers'][0]['provider_name'] }}</span>
+          {% else %}
+            <span>{{ movie['providers'] }}</span>
+          {% endif %}
           <div class="btn-genre">
-            <span>Action</span>
+            <span>{{ movie['genre_names'][0] }}</span>
           </div>
         </div>
       </div>
-      <div class="cards">
-        <img src="/static/img/movies/poorThings.png" alt="" />
-        <h6 class="mt-2">Poor Things</h6>
-        <div class="cards-info">
-          <span>StarPlus</span>
-          <div class="btn-genre">
-            <span>Comedy</span>
-          </div>
-        </div>
-      </div>
-      <div class="cards">
-        <img src="/static/img/movies/anatomyofFall.png" alt="" />
-        <h6 class="mt-2">Anatomy of a Fall</h6>
-        <div class="cards-info">
-          <span>Amazon</span>
-          <div class="btn-genre">
-            <span>Thriller</span>
-          </div>
-        </div>
-      </div>
-      <div class="cards">
-        <img src="/static/img/movies/zoneInterest.png" alt="" />
-        <h6 class="mt-2">The Zone of Interest</h6>
-        <div class="cards-info">
-          <span>Amazon</span>
-          <div class="btn-genre">
-            <span>Drama</span>
-          </div>
-        </div>
-      </div>
-      <div class="cards">
-        <img src="/static/img/movies/loveLies.png" alt="" />
-        <h6 class="mt-2">Love Lies Bleeding</h6>
-        <div class="cards-info">
-          <span>Amazon</span>
-          <div class="btn-genre">
-            <span>Romance</span>
-          </div>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </section>
 </main>
